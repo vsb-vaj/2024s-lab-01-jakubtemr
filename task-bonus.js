@@ -7,9 +7,15 @@
 // * * * * *
 
 // Your code:
-export const drawTriangle = (length = 5) => {
-  
+const drawTriangle = (length = 5) => {
     // ... write code ...
+    for (let i = 0; i < length; i++) {
+        let line = '';
+        for (let j = 0; j <= i; j++) {
+            line += '* ';
+        }
+        console.log(line);
+    }
 };
 
 // 2#  ========== BONUS =======================
@@ -27,10 +33,20 @@ export const drawTriangle = (length = 5) => {
 // J A V A S C R I P T
 
 // Your code:
-export const drawJavascriptWord = (word = "javascript") => {
-  // ... write code ...
+const drawJavascriptWord = (word = 'javascript') => {
+    // ... write code ...
+    for (let i = word.length; i >= 0; i--) {
+        let line = '';
+        for (let j = 0; j < word.length; j++) {
+            if (j >= i) {
+                line += word[j].toUpperCase() + ' ';
+            } else {
+                line += '* ';
+            }
+        }
+        console.log(line);
+    }
 };
-
 
 // 3#  ========== BONUS =======================
 // Create function that takes array of vehicles with measured top speeds. Return array of vehicle with top speed.
@@ -47,6 +63,7 @@ export const drawJavascriptWord = (word = "javascript") => {
 //   ];
 
 // Your code:
-export const getVehiclesAndTopSpeed = (vehicles) => {
-  
-};
+const getVehiclesAndTopSpeed = (vehicles) => {};
+
+//drawTriangle();
+drawJavascriptWord();
