@@ -63,7 +63,15 @@ const drawJavascriptWord = (word = 'javascript') => {
 //   ];
 
 // Your code:
-const getVehiclesAndTopSpeed = (vehicles) => {};
+const getVehiclesAndTopSpeed = (vehicles) => {
+    for (const vehicle of vehicles) {
+        const topSpeed = Math.max(...vehicle.measuredSpeeds);
+
+        vehicle.topSpeed = topSpeed;
+    }
+
+    return vehicles;
+};
 
 //drawTriangle();
-drawJavascriptWord();
+//drawJavascriptWord();
